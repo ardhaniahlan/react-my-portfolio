@@ -96,7 +96,7 @@ const CertificateCard = ({ item }: { item: CertificateItem }) => {
                 onClick={() => setShowModal(false)}
               ></div>
 
-              <div className="relative z-10 w-full max-w-4xl flex items-center justify-center">
+              <div className="relative z-10 w-full max-w-4xl flex flex-col items-center gap-6">
                 <button
                   onClick={() => setShowModal(false)}
                   className="absolute -top-12 right-0 text-white hover:text-red-400 transition-colors font-bold text-4xl z-20"
@@ -104,35 +104,34 @@ const CertificateCard = ({ item }: { item: CertificateItem }) => {
                   &times;
                 </button>
 
-                {isMultipleCerts && (
-                  <button
-                    onClick={prevCert}
-                    className="absolute left-0 md:-left-16 text-white/50 hover:text-white text-5xl md:text-6xl p-4 transition-colors z-20"
-                  >
-                    &#10094;
-                  </button>
-                )}
-
                 <div className="relative w-full text-center">
                   <img
                     src={item.certificate?.[currentCertIndex] || ""}
-                    alt={`Sertifikat ${currentCertIndex + 1}`}
-                    className="max-h-[80vh] mx-auto object-contain rounded-xl shadow-2xl"
+                    alt="Sertifikat"
+                    className="max-h-[60vh] md:max-h-[80vh] mx-auto object-contain rounded-xl shadow-2xl"
                   />
-                  {isMultipleCerts && (
-                    <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/80 font-medium tracking-widest bg-black/50 px-4 py-1 rounded-full">
-                      {currentCertIndex + 1} / {item.certificate?.length}
-                    </div>
-                  )}
                 </div>
 
                 {isMultipleCerts && (
-                  <button
-                    onClick={nextCert}
-                    className="absolute right-0 md:-right-16 text-white/50 hover:text-white text-5xl md:text-6xl p-4 transition-colors z-20"
-                  >
-                    &#10095;
-                  </button>
+                  <div className="flex flex-row items-center justify-center gap-6 w-full mt-2">
+                    <button
+                      onClick={prevCert}
+                      className="static md:absolute md:left-0 md:-left-16 text-white hover:text-blue-400 p-3 bg-white/10 md:bg-transparent rounded-full text-3xl md:text-6xl transition-colors z-20"
+                    >
+                      &#10094;
+                    </button>
+
+                    <div className="text-white/80 font-medium tracking-widest bg-black/50 px-4 py-1 rounded-full text-lg">
+                      {currentCertIndex + 1} / {item.certificate?.length}
+                    </div>
+
+                    <button
+                      onClick={nextCert}
+                      className="static md:absolute md:right-0 md:-right-16 text-white hover:text-blue-400 p-3 bg-white/10 md:bg-transparent rounded-full text-3xl md:text-6xl transition-colors z-20"
+                    >
+                      &#10095;
+                    </button>
+                  </div>
                 )}
               </div>
             </div>,
