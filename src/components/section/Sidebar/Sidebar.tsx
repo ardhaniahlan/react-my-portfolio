@@ -15,8 +15,8 @@ const Sidebar = () => {
     };
 
     const observer = new IntersectionObserver(handleScroll, {
-      rootMargin: "-50px 0px -70% 0px",
-      threshold: 0.1,
+      rootMargin: "-10% 0px -40% 0px",
+      threshold: 0,
     });
 
     const sections = document.querySelectorAll("section[id]");

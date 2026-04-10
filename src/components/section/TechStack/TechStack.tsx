@@ -20,7 +20,7 @@ const techItems: TechStackItem[] = [
 
 export const TechStack = () => {
   return (
-    <section id="techstack" className="duration-300 md:scroll-mt-8 mb-20 md:scroll-mt-8">
+    <section id="techstack" className="duration-300 scroll-mt-8 mb-20 md:scroll-mt-8">
       <motion.div
         initial="hidden"
                 whileInView="visible"

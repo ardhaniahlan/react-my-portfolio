@@ -41,7 +41,7 @@ const ExperienceCard = ({ exp }: { exp: ExperienceType }) => {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: false, amount: 0.05 }}
       variants={containerVariants}
     >
       <motion.div
@@ -182,7 +182,7 @@ const Experience = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.05 }}
         variants={containerVariants}
       >
         <motion.h2

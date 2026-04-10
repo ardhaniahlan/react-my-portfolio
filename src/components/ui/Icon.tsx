@@ -1,9 +1,8 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
 import { AiOutlineHome, AiOutlineStar } from "react-icons/ai";
-import { GoPerson } from "react-icons/go";
+import { GoPerson, GoStack } from "react-icons/go";
 import { PiCertificate } from "react-icons/pi";
 import { LuPhone } from "react-icons/lu";
-import { HiSquare3Stack3D } from "react-icons/hi2";
 import { MdPhoneAndroid, MdEmail } from "react-icons/md";
 import { CiMonitor } from "react-icons/ci";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -24,7 +23,7 @@ const iconMap = {
   certificate: PiCertificate,
   about: GoPerson,
   experience: AiOutlineStar,
-  techstack: HiSquare3Stack3D,
+  techstack: GoStack,
   android: MdPhoneAndroid,
   fullstack: FaGlobe,
   frontend: CiMonitor,
