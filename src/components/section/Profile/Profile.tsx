@@ -1,4 +1,6 @@
 import Icon from "../../ui";
+import profilePoto from "../../../assets/profile.jpeg";
+
 
 const Profile = () => {
   return (
@@ -9,7 +11,7 @@ const Profile = () => {
     >
       <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-pink-100 overflow-hidden border-4 border-white shadow-lg mb-6">
         <img
-          src="./src/assets/profile.jpeg"
+          src={profilePoto}
           alt="Ardhani Ahlan"
           className="w-full h-full object-cover"
         />
