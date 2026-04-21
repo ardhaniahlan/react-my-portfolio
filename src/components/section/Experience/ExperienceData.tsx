@@ -18,7 +18,7 @@ export const experiencesData = [
     id: 1,
     role: "Android Developer Intern",
     company: "Yayasan Kemas Foundation",
-    duration: "Feb 2026 - Sekarang",
+    duration: "Des 2025 - Sekarang",
     description:
       "Mengembangkan aplikasi admin berbasis Android secara end-to-end. Fokus utama pengembangan meliputi perancangan sistem autentikasi, manajemen daftar pengguna, serta implementasi fitur verifikasi KTP elektronik untuk memastikan validitas data. Selama proses magang ini, saya juga mendalami manajemen state pada Jetpack Compose dan menerapkan pola arsitektur MVVM agar kode lebih bersih, mudah di-maintenance, dan siap untuk pengembangan skala yang lebih besar.",
     github: "https://github.com/ardhaniahlan/koperasi-admin",
