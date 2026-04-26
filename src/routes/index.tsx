@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { routes } from "./Route";
 
-export default createBrowserRouter(routes);
+export default createBrowserRouter(routes, {
+  basename: "/my-portfolio/",
+});
