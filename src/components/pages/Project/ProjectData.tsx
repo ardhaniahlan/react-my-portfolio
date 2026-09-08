@@ -33,6 +33,14 @@ import t4 from "../../../assets/tiketqu/t4.png";
 import t5 from "../../../assets/tiketqu/t5.png";
 import t6 from "../../../assets/tiketqu/t6.png";
 
+import w1 from "../../../assets/wms/w1.png";
+import w2 from "../../../assets/wms/w2.png";
+import w3 from "../../../assets/wms/w3.png";
+import w4 from "../../../assets/wms/w4.png";
+import w5 from "../../../assets/wms/w5.png";
+import w6 from "../../../assets/wms/w6.png";
+import w7 from "../../../assets/wms/w7.png";
+
 import type { ReactNode } from "react";
 
 export interface Project {
@@ -50,20 +58,32 @@ export const projectsData: Project[] = [
   {
     id: "tiketqu-ticketing-system",
     title: "TiketQu: Neo-Brutalism Event Ticketing & Payment",
-    description: "Platform penjualan tiket event serbaguna terintegrasi Payment Gateway dengan UI/UX Neo-Brutalism.",
+    description:
+      "Platform penjualan tiket event serbaguna terintegrasi Payment Gateway dengan UI/UX Neo-Brutalism.",
     fullDescription: (
       <>
-        Sebuah platform <em>ticketing</em> serbaguna (Konser, Seminar, Olahraga) yang mengusung gaya desain 
-        <strong> Neo-Brutalism</strong> yang unik, interaktif, dan modern. Dibangun menggunakan arsitektur 
-        <strong> Next.js (App Router)</strong> dan <strong>PostgreSQL (Drizzle ORM)</strong>.
-        <br /><br />
-        Fitur utamanya meliputi: Sistem Autentikasi menggunakan <strong>NextAuth (Google OAuth)</strong>, integrasi 
-        <em> Payment Gateway</em> <strong>Midtrans Sandbox</strong> untuk validasi pembayaran secara otomatis 
-        (mendukung Virtual Account, GoPay, QRIS, dll), dan penerbitan <em>E-Ticket</em> interaktif yang bisa diakses pada Gmail.
-        <br /><br />
-        Dilengkapi dengan panel Admin komprehensif untuk manajemen <em>event</em> (CRUD), pelacakan status transaksi 
-        pengguna secara <em>real-time</em>, optimasi performa dengan <em>Server-side Pagination</em>, dan integrasi 
-        titik koordinat <strong>Google Maps (Embed iFrame)</strong> secara dinamis ke dalam halaman detail tiket.
+        Sebuah platform <em>ticketing</em> serbaguna (Konser, Seminar, Olahraga)
+        yang mengusung gaya desain
+        <strong> Neo-Brutalism</strong> yang unik, interaktif, dan modern.
+        Dibangun menggunakan arsitektur
+        <strong> Next.js (App Router)</strong> dan{" "}
+        <strong>PostgreSQL (Drizzle ORM)</strong>.
+        <br />
+        <br />
+        Fitur utamanya meliputi: Sistem Autentikasi menggunakan{" "}
+        <strong>NextAuth (Google OAuth)</strong>, integrasi
+        <em> Payment Gateway</em> <strong>Midtrans Sandbox</strong> untuk
+        validasi pembayaran secara otomatis (mendukung Virtual Account, GoPay,
+        QRIS, dll), dan penerbitan <em>E-Ticket</em> interaktif yang bisa
+        diakses pada Gmail.
+        <br />
+        <br />
+        Dilengkapi dengan panel Admin komprehensif untuk manajemen{" "}
+        <em>event</em> (CRUD), pelacakan status transaksi pengguna secara{" "}
+        <em>real-time</em>, optimasi performa dengan{" "}
+        <em>Server-side Pagination</em>, dan integrasi titik koordinat{" "}
+        <strong>Google Maps (Embed iFrame)</strong> secara dinamis ke dalam
+        halaman detail tiket.
       </>
     ),
     url: "https://tiketqu-next-js.vercel.app/",
@@ -78,6 +98,90 @@ export const projectsData: Project[] = [
       "Neon DB",
       "NextAuth.js",
       "Midtrans API",
+    ],
+  },
+  {
+    id: "warehouse-management-system",
+    title: "Warehouse Management System (WMS) Dashboard",
+    description:
+      "Sistem manajemen gudang terintegrasi dengan arsitektur terpisah (Decoupled) untuk mengelola inventaris, rak, dan mutasi barang secara efisien.",
+    fullDescription: (
+      <>
+        Sebuah aplikasi <em>Dashboard Panel Admin</em> yang dirancang untuk
+        melacak dan mengelola operasional gudang secara terpusat. Dibangun
+        menggunakan arsitektur <strong>Decoupled</strong>, memisahkan antarmuka
+        pengguna berbasis <strong>Next.js (App Router)</strong> dengan API
+        tangguh berbasis <strong>Express.js</strong> yang berjalan secara{" "}
+        <em>Serverless</em> di Vercel.
+        <br />
+        <br />
+        Fitur keamanannya menonjolkan{" "}
+        <strong>Cross-Domain Authentication</strong> menggunakan JWT. Sistem ini
+        mengawinkan <em>httpOnly cookies</em> dari sisi backend dengan{" "}
+        <em>Client-side Cookies</em>
+        yang dienkripsi, lalu dijaga ketat oleh{" "}
+        <strong>Next.js Middleware</strong> untuk melindungi rute privat
+        (Dashboard, Items, Warehouses, Racks, dan Mutations) dari akses tanpa
+        izin.
+        <br />
+        <br />
+        Dilengkapi dengan fitur inti meliputi:{" "}
+        <strong>Manajemen Entitas Gudang</strong> (CRUD untuk Barang, Gudang,
+        dan Rak), <strong>Pencatatan Mutasi Barang</strong>, serta sistem
+        Katalog dinamis yang mendukung Pencarian (<em>Search</em>) dan Paginasi.
+        Antarmuka pengguna juga diperkaya dengan
+        <em>real-time feedback</em> menggunakan Sonner untuk memberikan
+        pengalaman manajemen data yang mulus.
+      </>
+    ),
+    url: "https://wms-fe-two.vercel.app",
+    thumbnail: w1,
+    gallery: [w1, w2, w3, w4, w5, w6, w7],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Express.js",
+      "Prisma ORM",
+      "PostgreSQL (Neon DB)",
+      "Axios",
+      "js-cookie",
+      "Sonner",
+    ],
+  },
+  {
+    id: "it-helpdesk-system",
+    title: "IT Helpdesk & Ticketing System Full-Stack",
+    description:
+      "Sistem pelaporan kendala IT dan manajemen bantuan perusahaan berbasis peran.",
+    fullDescription: (
+      <>
+        Sebuah aplikasi <em>full-stack</em> IT Helpdesk yang dirancang untuk
+        mengelola dan melacak laporan kendala infrastruktur perusahaan secara
+        efisien. Dibangun menggunakan arsitektur <strong>Next.js</strong>
+        dan <strong>PostgreSQL (Drizzle ORM)</strong>. Fitur utamanya meliputi:
+        Autentikasi berbasis peran (Admin & User) dengan pengaman{" "}
+        <em>Edge Middleware</em>, manajemen tiket lengkap dengan kategori
+        (Hardware/Software) dan status (Pending, In Progress, Resolved), serta
+        fitur <strong>Live Chat Real-time</strong> di dalam detail tiket.
+        Dilengkapi juga dengan panel Admin komprehensif yang mencakup manajemen
+        pengguna, filter pencarian dinamis dengan <em>Debounce</em>, paginasi
+        data, dan laporan statistik performa.
+      </>
+    ),
+    url: "https://helpdesk-app-nextjs.vercel.app/",
+    thumbnail: h1,
+    gallery: [h1, h2, h3, h4, h5, h6, h7],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Neon DB",
+      "Lucide React",
+      "Sonner",
+      "Zod",
     ],
   },
   {
@@ -120,11 +224,16 @@ export const projectsData: Project[] = [
     description: "Platform marketplace untuk sewa alat dan venue",
     fullDescription: (
       <>
-        Sebuah aplikasi <em>full-stack</em> yang mempertemukan penyewa dengan pemilik aset (Vendor). Dibangun menggunakan arsitektur <strong>Next.js</strong> dan <strong>Supabase</strong> sebagai <em>Backend-as-a-Service</em>. 
-        Fitur utamanya meliputi: Autentikasi multi-peran (User & Admin/Vendor) menggunakan Edge Middleware, 
-        manajemen katalog dan ketersediaan barang, keranjang pemesanan dinamis, serta penerbitan E-Ticket. 
-        Vendor memiliki akses ke dasbor analitik khusus untuk menyetujui atau menolak pesanan. Aplikasi ini 
-        juga dilengkapi dengan Row Level Security (RLS) untuk keamanan data dan integrasi API WhatsApp untuk komunikasi langsung.
+        Sebuah aplikasi <em>full-stack</em> yang mempertemukan penyewa dengan
+        pemilik aset (Vendor). Dibangun menggunakan arsitektur{" "}
+        <strong>Next.js</strong> dan <strong>Supabase</strong> sebagai{" "}
+        <em>Backend-as-a-Service</em>. Fitur utamanya meliputi: Autentikasi
+        multi-peran (User & Admin/Vendor) menggunakan Edge Middleware, manajemen
+        katalog dan ketersediaan barang, keranjang pemesanan dinamis, serta
+        penerbitan E-Ticket. Vendor memiliki akses ke dasbor analitik khusus
+        untuk menyetujui atau menolak pesanan. Aplikasi ini juga dilengkapi
+        dengan Row Level Security (RLS) untuk keamanan data dan integrasi API
+        WhatsApp untuk komunikasi langsung.
       </>
     ),
     url: "https://booking-app-nextjs-five.vercel.app/",
@@ -141,61 +250,43 @@ export const projectsData: Project[] = [
       "Zod",
     ],
   },
-  {
-    id: "it-helpdesk-system",
-    title: "IT Helpdesk & Ticketing System Full-Stack",
-    description: "Sistem pelaporan kendala IT dan manajemen bantuan perusahaan berbasis peran.",
-    fullDescription: (
-      <>
-        Sebuah aplikasi <em>full-stack</em> IT Helpdesk yang dirancang untuk mengelola dan melacak laporan kendala 
-        infrastruktur perusahaan secara efisien. Dibangun menggunakan arsitektur <strong>Next.js</strong> 
-        dan <strong>PostgreSQL (Drizzle ORM)</strong>. 
-        Fitur utamanya meliputi: Autentikasi berbasis peran (Admin & User) dengan pengaman <em>Edge Middleware</em>, 
-        manajemen tiket lengkap dengan kategori (Hardware/Software) dan status (Pending, In Progress, Resolved), 
-        serta fitur <strong>Live Chat Real-time</strong> di dalam detail tiket. Dilengkapi juga dengan panel Admin komprehensif 
-        yang mencakup manajemen pengguna, filter pencarian dinamis dengan <em>Debounce</em>, paginasi data, dan laporan statistik performa.
-      </>
-    ),
-    url: "https://helpdesk-app-nextjs.vercel.app/",
-    thumbnail: h1, 
-    gallery: [h1, h2, h3, h4, h5, h6, h7],
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "PostgreSQL",
-      "Drizzle ORM",
-      "Neon DB",
-      "Lucide React",
-      "Sonner",
-      "Zod",
-    ],
-  },
+
   {
     id: "enterprise-project-management",
     title: "Enterprise Project & Task Management System",
-    description: "Sistem kolaborasi tim dan manajemen proyek berbasis Kanban dengan fitur Multi-Tenant dan Role-Based Access Control (RBAC).",
+    description:
+      "Sistem kolaborasi tim dan manajemen proyek berbasis Kanban dengan fitur Multi-Tenant dan Role-Based Access Control (RBAC).",
     fullDescription: (
       <>
-        Sebuah aplikasi <em>Software as a Service (SaaS)</em> skala enterprise yang dirancang untuk mengelola proyek 
-        dan produktivitas tim secara terpusat. Dibangun menggunakan arsitektur <strong>Next.js (App Router)</strong> 
-        dan <strong>PostgreSQL (Drizzle ORM)</strong>. 
-        <br /><br />
-        Fitur utamanya meliputi: Sistem <strong>Multi-Tenant (Workspace)</strong> di mana pengguna dapat membuat 
-        organisasi dan mengundang anggota tim (Invite System); <strong>Role-Based Access Control (RBAC)</strong> yang ketat 
-        memisahkan hak akses antara Owner, Project Manager, dan Member. 
-        <br /><br />
-        Dilengkapi dengan fitur inti berupa <strong>Interactive Kanban Board</strong> (Drag & Drop) untuk manajemen tugas 
-        yang mendalam (Prioritas, Tenggat Waktu, <em>Checklist/Sub-tasks</em>, dan Sistem Komentar). 
-        Memiliki fitur keamanan mutakhir seperti <em>Read-Only / Archive Mode</em> untuk proyek yang telah selesai, 
-        serta <strong>Activity Logger (CCTV)</strong> yang mencatat setiap aksi pengguna secara otomatis di <em>Dynamic Dashboard</em>.
+        Sebuah aplikasi <em>Software as a Service (SaaS)</em> skala enterprise
+        yang dirancang untuk mengelola proyek dan produktivitas tim secara
+        terpusat. Dibangun menggunakan arsitektur{" "}
+        <strong>Next.js (App Router)</strong>
+        dan <strong>PostgreSQL (Drizzle ORM)</strong>.
+        <br />
+        <br />
+        Fitur utamanya meliputi: Sistem{" "}
+        <strong>Multi-Tenant (Workspace)</strong> di mana pengguna dapat membuat
+        organisasi dan mengundang anggota tim (Invite System);{" "}
+        <strong>Role-Based Access Control (RBAC)</strong> yang ketat memisahkan
+        hak akses antara Owner, Project Manager, dan Member.
+        <br />
+        <br />
+        Dilengkapi dengan fitur inti berupa{" "}
+        <strong>Interactive Kanban Board</strong> (Drag & Drop) untuk manajemen
+        tugas yang mendalam (Prioritas, Tenggat Waktu,{" "}
+        <em>Checklist/Sub-tasks</em>, dan Sistem Komentar). Memiliki fitur
+        keamanan mutakhir seperti <em>Read-Only / Archive Mode</em> untuk proyek
+        yang telah selesai, serta <strong>Activity Logger (CCTV)</strong> yang
+        mencatat setiap aksi pengguna secara otomatis di{" "}
+        <em>Dynamic Dashboard</em>.
       </>
     ),
-    url: "https://project-management-app-next-js.vercel.app", 
+    url: "https://project-management-app-next-js.vercel.app",
     thumbnail: p1,
     gallery: [p1, p2, p3, p4, p5, p6, p7],
     techStack: [
-      "Next.js", 
+      "Next.js",
       "TypeScript",
       "Tailwind CSS",
       "PostgreSQL",
@@ -205,5 +296,5 @@ export const projectsData: Project[] = [
       "Lucide React",
       "Sonner",
     ],
-  }
+  },
 ];
